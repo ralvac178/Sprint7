@@ -1,9 +1,12 @@
-import pandas as pd
-import plotly.express as px
 import streamlit as st
+import plotly.express as px
+import pandas as pd
+import numpy as np
 
-st.header('Lanzar una moneda')
+st.title("Histograma con Plotly")
 
-start_button = st.button('Ejecutar')
+car_data = pd.read_csv('vehicles_us.csv')  # leer los datos
+fig = px.histogram(car_data, x="odometer")  # crear un histograma
 
-st.write('Esta aplicación aún no es funcional. En construcción.')
+# Mostrar en Streamlit
+st.plotly_chart(fig)
