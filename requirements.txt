@@ -1,5 +1,6 @@
 pandas
 scipy
 streamlit
-plotly-express
+plotly
+
 
